@@ -1,0 +1,10 @@
+.list {
+  @apply
+    flex
+    justify-start
+    flex-col
+}
+
+.item {
+  @apply text-base
+}
