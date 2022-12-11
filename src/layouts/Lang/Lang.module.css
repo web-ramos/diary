@@ -1,0 +1,37 @@
+.selectLang {
+  @apply
+    relative
+    hover:cursor-pointer
+    w-16
+}
+
+.currentLang {
+  @apply
+    p-3
+    text-center    
+}
+
+.listLang {
+  @apply
+    absolute
+    top-[3.25rem]
+    right-0
+    bg-teal-800
+    w-16    
+}
+
+.listLang.open {
+  @apply
+    hidden
+}
+
+.itemLang {
+  @apply  
+    p-3
+    text-center
+}
+
+.itemLang.active {
+  @apply
+    hidden
+}

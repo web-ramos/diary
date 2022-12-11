@@ -1,0 +1,8 @@
+.App {
+  @apply
+    flex-col
+    min-h-full
+    justify-start
+    text-lg
+    bg-slate-200;
+}

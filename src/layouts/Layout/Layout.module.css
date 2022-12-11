@@ -1,0 +1,19 @@
+.headerContainer {
+  @apply
+    sticky
+    top-0
+    flex
+    flex-nowrap
+    bg-teal-900
+    text-white    
+}
+
+.mainContainer {
+  min-height: calc(100vh - 5rem);
+}
+
+.footerContainer {
+  @apply
+    sticky
+    bottom-0
+}
