@@ -1,5 +1,12 @@
 {
   "Home": "В начало",
   "Projects": "Проекты",
-  "Contexts": "Контексты"
+  "Contexts": "Контексты",
+  "Sunday": "Воскресенье",
+  "Monday": "Понедельник",
+  "Tuesday": "Вторник",
+  "Wednesday": "Среда",
+  "Thursday": "Четверг",
+  "Friday": "Пятница",
+  "Saturday": "Суббота"
 }

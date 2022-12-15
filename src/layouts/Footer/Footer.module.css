@@ -1,0 +1,17 @@
+.footer {
+  @apply
+    container
+    flex
+    flex-nowrap
+    justify-between
+    items-center
+    h-7;
+  margin: 0 auto  
+}
+
+.version,
+.date {
+  @apply
+    text-base
+    px-3
+}

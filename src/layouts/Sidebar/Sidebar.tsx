@@ -1,7 +1,8 @@
 import React from 'react'
+import { EditContext } from '../../components/Context/Context'
 
 export default function Sidebar() {
   return (
-    <div>Sidebar</div>
+    <EditContext context={null} open={true}/>
   )
 }

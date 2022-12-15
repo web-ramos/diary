@@ -1,0 +1,87 @@
+/*****************************/
+/* styles form
+/*****************************/
+
+.fieldset {
+  @apply
+    p-5
+}
+
+.legend {
+  @apply
+    font-bold
+    mb-5  
+}
+
+.field {
+  @apply  
+    mb-5
+}
+
+.field input,
+.field input[type="text"] {
+  @apply
+    w-full
+    rounded    
+    px-3
+    py-2
+    text-sm
+    bg-white
+    autofill:bg-white
+    outline-none
+}
+
+
+.fieldError {
+  @apply
+    text-rose-600
+    text-sm
+    mt-1
+}
+
+.label {
+  @apply
+    text-sm
+    block
+    mb-1
+}
+
+.actions {
+  @apply
+    md:flex
+    md:justify-center
+    md:items-center
+    md:gap-3
+}
+
+.actions .action {
+  @apply  
+    md:w-full
+}
+
+.actions .action .button {
+  @apply
+    w-full
+    text-center
+    rounded    
+    bg-teal-900
+    text-white
+    border-2    
+    border-teal-900    
+    text-base
+    p-2
+    mb-3
+    transition-colors
+    duration-300    
+    hover:cursor-pointer
+    hover:bg-teal-700
+    md:mb-0
+}
+
+.actions .action .button.reset {
+  @apply
+    bg-white
+    border-teal-900
+    text-teal-900
+    hover:bg-teal-200  
+}

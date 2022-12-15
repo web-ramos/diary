@@ -1,0 +1,37 @@
+.item {
+  @apply
+  bg-white
+    border-2
+    border-teal-800
+    rounded
+    p-3
+    mb-3
+    max-w-sm
+}
+
+.item.deleted {
+  @apply
+    opacity-50
+}
+
+.name {
+  @apply
+    text-base
+}
+
+.desc {
+  @apply
+    text-sm
+    text-gray-400
+}
+
+.action {
+  @apply
+    hover:cursor-pointer
+
+}
+
+.action svg {
+  @apply  
+    fill-teal-900 hover:fill-teal-700
+}

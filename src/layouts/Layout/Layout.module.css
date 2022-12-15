@@ -2,8 +2,6 @@
   @apply
     sticky
     top-0
-    flex
-    flex-nowrap
     bg-teal-900
     text-white    
 }
@@ -16,4 +14,8 @@
   @apply
     sticky
     bottom-0
+    flex
+    flex-nowrap    
+    text-white
+    bg-black   
 }

@@ -1,30 +1,27 @@
-import { FC, useState } from 'react'
+import React, { FC, useState } from 'react'
 import clsx from 'clsx'
 import styles from './Lang.module.css'
 import { useTranslation } from 'react-i18next';
+import { ILanguage } from '../../types/types';
 
 
-interface IProps {
+interface ILangProps {
   currentLang: string,
   listLang: any
 }
 
-interface Ilanguage {
-  label: string,
-  locale: string,
-  key: string
-}
+const Lang: FC<ILangProps> = ({ currentLang, listLang }) => {
+  const [lang, setLang] = useState<string>(currentLang);
+  const [hidden, setHidden] = useState<boolean>(true);  
 
-const Lang: FC<IProps> = ({ currentLang, listLang }) => {
-  const [lang, setLang] = useState(currentLang);
-  const [hidden, setHidden] = useState(true);  
+  const { i18n } = useTranslation();
 
-  const { t, i18n } = useTranslation();
+  let currentLabel = listLang.find( (item: ILanguage) => (item.key === lang))['label'];
 
-  let currentLabel = listLang.find( (item: Ilanguage) => (item.key === lang))['label'];
+  const handleChange = (event: React.MouseEvent<HTMLElement>) => {
+    const target = event.target as HTMLElement;    
+    const clickedElement = target.getAttribute('value');  
 
-  const handleChange = (event: any) => {
-    const clickedElement = event.target.getAttribute('value');
     if (clickedElement) {
       setLang(clickedElement);
       i18n.changeLanguage(clickedElement)      
@@ -32,14 +29,13 @@ const Lang: FC<IProps> = ({ currentLang, listLang }) => {
     } else {
       setHidden(!hidden);
     } 
-    console.log(clickedElement);
   }
 
   return (
     <div className = {styles.selectLang} onClick = { handleChange }>
       <div className = { styles.currentLang }>{ currentLabel }</div>
       <ul className = { clsx({[styles.listLang]:true, [styles.open]: hidden}) }>
-        { listLang.map( (item: Ilanguage) => {
+        { listLang.map( (item: ILanguage) => {
           return (
             <li
               key = { item.key }

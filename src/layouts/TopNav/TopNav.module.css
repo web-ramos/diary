@@ -2,9 +2,7 @@
   @apply
     container
     flex
-    flex-nowrap
-    bg-teal-900
-    text-white;    
+    flex-nowrap;
   margin: 0 auto
 }
 
