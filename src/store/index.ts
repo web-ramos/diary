@@ -6,5 +6,10 @@ export default configureStore({
   reducer: {
     diary: diaryReducer,
   },
-  preloadedState: loadState(),  
+
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
+  preloadedState: loadState(),
 });

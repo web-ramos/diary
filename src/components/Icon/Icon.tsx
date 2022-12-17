@@ -9,9 +9,9 @@ interface PropsIcon {
   size?: number
 }
 
-const Icon: FC<PropsIcon> = ({ name, color = 'currenColor', size = 24 }) => (
-  <svg className={`icon icon-${name}`} fill={color} width={size} height={size}>
-    <use xlinkHref={`${Icons}#icon-${name}`} />
+const Icon: FC<PropsIcon> = ({ name, color = 'currentColor', size = 24 }) => (
+  <svg className={`icon ${name}`} fill={color} width={size} height={size}>
+    <use xlinkHref={`${Icons}#${name}`} />
   </svg>
 );
 

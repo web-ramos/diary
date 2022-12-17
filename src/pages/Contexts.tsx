@@ -1,9 +1,10 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { IContext } from '../types/types'
 import { useDispatch } from 'react-redux'
 import { deleteContext } from '../store/diarySlice'
 import { useSelector } from 'react-redux'
 import { ListItem } from '../components/ListItem/ListItem'
+import { IconPicker } from '../components/IconPicker/IconPicker'
 
 const Contexts: FC = () => {
 
@@ -11,20 +12,23 @@ const Contexts: FC = () => {
   const dispatch = useDispatch()
 
   const deleteHandler = (id: string) => {
-    console.log(id);
     dispatch(deleteContext(id))
+  }
+
+  const editHandler = (id: string) => {
+    // edit context reducer
   }
 
   return (
     <div className="container m-auto p-3">
       <ul>
-        {contexts.map((item: IContext) => (
+        {contexts.map((item: IContext) =>
           <ListItem
             key={item.id}
             item={item}
             deleteHandler={deleteHandler}
           />
-        ))}
+        )}
       </ul>
     </div>
   );

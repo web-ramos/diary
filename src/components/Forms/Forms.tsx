@@ -2,8 +2,6 @@ import { FC } from 'react'
 import { UseFormRegister } from 'react-hook-form';
 import { useTranslation } from 'react-i18next'
 
-
-
 interface PropsFieldErrors {
   field: string,
   errors?: any
@@ -25,7 +23,7 @@ interface PropsFieldLabel {
 }
 
 export const FieldLabel: FC<PropsFieldLabel> = ({field, text, Required, className = 'label'} ) => {
-  const { t } = useTranslation()  
+  const { t } = useTranslation()
   return (
     <>
       <label htmlFor={field} className={className}>{t(text)} <span>{Required && '*'}</span></label>
@@ -39,7 +37,7 @@ interface PropsFieldInput {
   field: string,
   errors?: any,
   Required?: boolean,
-  className?: string   
+  className?: string
 }
 
 export const FieldInput: FC<PropsFieldInput> = ({labelText, Required, register, field, errors,  className = 'field' }) => {
@@ -48,8 +46,8 @@ export const FieldInput: FC<PropsFieldInput> = ({labelText, Required, register, 
         <div className={className}>
           {labelText && <FieldLabel field={field} text={labelText} Required={Required} />}
           <input {...register(field)} />
-          <FieldErrors field={field} errors={errors} />          
-        </div>    
+          <FieldErrors field={field} errors={errors} />
+        </div>
     </>
   )
 }

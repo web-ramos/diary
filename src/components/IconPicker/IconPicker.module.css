@@ -1,0 +1,33 @@
+.wrapper {
+  @apply
+    grid
+    grid-cols-6 sm:grid-cols-8
+    gap-3
+}
+
+.icon {
+  @apply
+    flex
+    flex-grow-0
+    flex-shrink-0
+    justify-center
+    items-center
+    bg-white
+    rounded
+    border-2
+    border-teal-900
+    w-9
+    h-9
+    hover:cursor-pointer
+    hover:border-teal-700
+}
+
+.icon svg {
+  @apply
+    fill-teal-900
+}
+
+.icon:hover svg {
+  @apply
+    fill-teal-700
+}

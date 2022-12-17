@@ -18,16 +18,16 @@ export const ListItem: FC<PropsListItem> = ({ item, deleteHandler, children}) =>
       <div className={styles.short}>
         <div className={styles.name}>{item.name}</div>
         <div className={clsx(styles.action, styles.remove)} onClick={() => deleteHandler(item.id)}>
-          <Icon name="remove" />          
+          <Icon name="icon-remove" />
         </div>
         <div className={clsx(styles.action, styles.edit)}>
-          <Icon name="edit" />          
+          <Icon name="icon-edit" />
         </div>
       </div>
       <div className={styles.desc}>
         <div className="description">{item.description}</div>
-      </div>      
-      {children}      
+      </div>
+      {children}
     </li>
   );
 }

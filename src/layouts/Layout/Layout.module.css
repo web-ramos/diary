@@ -3,7 +3,8 @@
     sticky
     top-0
     bg-teal-900
-    text-white    
+    text-white
+    z-50
 }
 
 .mainContainer {
@@ -15,7 +16,7 @@
     sticky
     bottom-0
     flex
-    flex-nowrap    
+    flex-nowrap
     text-white
-    bg-black   
+    bg-black
 }

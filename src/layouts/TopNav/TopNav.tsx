@@ -13,7 +13,7 @@ const languages: ILanguage[] = [
     key: 'en'
   },
   {
-    label: 'RUS',    
+    label: 'RUS',
     locale: 'RU_ru',
     key: 'ru'
   }
@@ -37,7 +37,7 @@ const TopNav: FC = () => {
             </li>
             <li>
               <Link to="/">{t('Ideas')}</Link>
-            </li>                  
+            </li>
             <li>
               <Link to="/contexts">{t('Contexts')}</Link>
             </li>
@@ -52,8 +52,8 @@ const TopNav: FC = () => {
             </li>
             <li>
               <Link to="/">{t('Dish')}</Link>
-            </li>                                             
-          </ul>      
+            </li>
+          </ul>
         </nav>
         <Lang currentLang = {'en'} listLang = {languages} />
     </div>

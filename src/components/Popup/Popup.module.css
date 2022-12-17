@@ -1,0 +1,49 @@
+.wrapperPopup {
+  @apply
+    fixed
+    top-0
+    left-0
+    w-full
+    h-screen
+    flex
+    justify-center
+    items-center
+    z-[200]
+    bg-white/[0.9]
+}
+
+.containerPopup {
+  @apply
+    relative
+    m-auto
+    p-5
+    border-2
+    border-teal-800
+    rounded
+    bg-teal-100
+}
+
+.buttonClose {
+  @apply
+    absolute
+    -top-4
+    -right-4
+    block
+    w-9
+    h-9
+    hover:cursor-pointer
+    bg-white
+    hover:border-teal-700
+}
+
+.buttonClose svg {
+  @apply
+    fill-teal-900
+    w-9
+    h-9
+}
+
+.buttonClose:hover svg {
+  @apply
+    fill-teal-700
+}

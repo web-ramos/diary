@@ -9,14 +9,14 @@ export default function Layout() {
   return (
     <>
       <header className={styles.headerContainer}>
-        <TopNav />        
+        <TopNav />
       </header>
       <main className={styles.mainContainer}>
         <aside className={styles.sidebar}>
           <Sidebar />
         </aside>
         <section className={styles.contentContainer}>
-          <Outlet />        
+          <Outlet />
         </section>
       </main>
       <footer className={styles.footerContainer}>

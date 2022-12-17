@@ -9,7 +9,7 @@ export interface IContext {
   order: string,
   name: string,
   description?: string,
-  icon?: string
+  icon: string
   deleted: boolean
 }
 
@@ -41,8 +41,15 @@ export interface ITask {
   description?: string
 }
 
+enum Direction {
+  TASK,
+  PROJECT,
+  CONTEXT
+}
+
 export interface IWindow {
-  openTask: boolean | null
+  open: boolean | null,
+  form: Direction
 }
 
 export interface IStore {
@@ -50,6 +57,6 @@ export interface IStore {
   contexts: IContext[],
   projects: IProject[],
   tasks?: ITask[],
+  sprite: string[],
   windows?: IWindow
 }
-
